@@ -15,6 +15,8 @@
 	--secondary-text-color: #f4f4fd;
 	--accent-color: #4d5ae5;
 	--secondary-accent-color: #e7e9fc;
+	--subtle-text-color: #8E8F99;
+	--success-color: #31D0AA;
 }
 
 *,
@@ -61,7 +63,10 @@ body {
 	text-decoration: none;
 }
 
-.logo.footer {
+.footer .logo {
+	display: block;
+	margin-bottom: 16px;
+
 	color: var(--light-text-color);
 }
 
@@ -282,12 +287,47 @@ body {
 	padding: 32px 16px;
 }
 
+.team-list-description .text {
+	margin-bottom: 8px;
+}
+
 .list-box {
 	background-color: var(--primary-color);
 }
 
 .team-list {
 	border-radius: 0 0 4px 4px;
+}
+
+.list-icon {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+/* team-icon-style */
+
+.team-list-description .list-icon {	
+	padding: 4px 0;
+}
+
+.team-list-description .icon-box:not(:last-child) {
+	margin-right: 24px;
+}
+
+.team-list-description .link {
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	background-color: var(--accent-color);
+	border-radius: 50%;
+}
+
+.team-list-description .icon {
+	margin: auto;
+	width: 16px;
+	height: 16px;
 }
 
 /* ------------------ portfolio gallery ------------------ */
@@ -414,6 +454,39 @@ body {
 		0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* ------------------ customers ------------------ */
+
+.customers {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.customers .list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.customers .item {
+	width: 168px;
+	height: 88px;
+	padding: 16px 32px;
+
+	border: 1px solid var(--subtle-text-color);
+	border-radius: 4px;
+}
+
+.customers .link {
+	display: block;
+}
+
+.customers .icon {
+	width: 104px;
+	height: 56px;
+}
+
+
 /* ------------------ footer ------------------ */
 
 .footer {
@@ -424,7 +497,42 @@ body {
 	background-color: var(--secondary-color);
 }
 
-.footer-text {
-	margin-top: 16px;
+.footer .container {
+	display: flex;
+}
+
+.footer .box:not(:last-child) {
+	margin-right: 120px;
+}
+
+.footer .description {
 	width: 264px;
+}
+
+.footer .text-social {
+	margin-bottom: 16px;
+	font-weight: 500;
+}
+
+.footer .link {
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+}
+
+.footer .link:hover,
+.footer .link:focus {
+	background-color: var(--success-color);
+}
+
+.footer .icon-box:not(:last-child) {
+	margin-right: 16px;
+}
+
+.footer .icon {
+	margin: auto;
+	width: 24px;
+	height: 24px;
 }
