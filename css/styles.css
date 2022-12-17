@@ -219,40 +219,26 @@ body {
 	column-gap: 24px;
 }
 
-/* .content-box {} */
-
 .section.features {
 	padding: 120px 0;
 }
 
-.features .content-box::before {
-	display: inline-block;
-	content: "";
+.features .box-icon {
+	display: block;
 	width: 264px;
 	height: 112px;
-	padding-top: 24px;
-	padding-bottom: 24px;
+	padding: 24px 0;
+	margin-bottom: 8px;
 
-	background-repeat: no-repeat;
-	background-position: center;
+	text-align: center;
+
 	background-color: var(--secondary-text-color);
 	border-radius: 4px;
 }
 
-.features .content-box.strategy::before {
-	background-image: url("../images/antenna.svg");
-}
-
-.features .content-box.punctuality::before {
-	background-image: url("../images/clock.svg");
-}
-
-.features .content-box.diligence::before {
-	background-image: url("../images/diagram.svg");
-}
-
-.features .content-box.technologies::before {
-	background-image: url("../images/astronaut.svg");
+.features .icon {
+	width: 64px;
+	height: 64px;
 }
 
 .section.pictures {
@@ -477,16 +463,16 @@ body {
 	fill: var(--subtle-text-color);
 }
 
-.customers .icon {
-	display: inline-block;
-	width: 104px;
-	height: 56px;
-}
-
 .customers .link:hover,
 .customers .link:focus {
 	border: 1px solid var(--accent-color);
 	fill: var(--accent-color);
+}
+
+.customers .icon {
+	display: inline-block;
+	width: 104px;
+	height: 56px;
 }
 
 /* ------------------ footer ------------------ */
