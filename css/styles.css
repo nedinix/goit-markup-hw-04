@@ -292,27 +292,32 @@ body {
 }
 
 
-/* team-icon-style */
+/* social-icon-style */
+
+.icon-box {
+	display: inline-flex;
+	justify-content: center;
+    align-items: center;
+}
 
 .team-list-description .list-icon {	
 	padding: 4px 0;
 }
 
-.team-list-description .icon-box:not(:last-child) {
+/* .team-list-description .icon-box:not(:last-child) {
 	margin-right: 24px;
-}
+} */
 
-.team-list-description .link {
-	display: inline-flex;
-	justify-content: center;
-    align-items: center;
+.team-list-description .icon-box {
 	width: 40px;
 	height: 40px;
+	padding: 12px;
 	background-color: var(--accent-color);
 	border-radius: 50%;
 }
 
 .team-list-description .icon {
+	display: block;
 	width: 16px;
 	height: 16px;
 }
@@ -321,6 +326,7 @@ body {
 
 .portfolio-wrapper {
 	padding: 96px 0 120px;
+	
 }
 
 .portfolio.list {
@@ -331,11 +337,18 @@ body {
 	column-gap: 24px;
 }
 
-/* .portfolio.list-box {} */
-
 .portfolio-item {
+	display: block;
 	color: var(--text-color);
 	text-decoration: none;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+		0px 1px 1px rgba(46, 47, 66, 0.16),
+		0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item-description {
@@ -343,18 +356,6 @@ body {
 
 	border: 0.5px solid var(--secondary-text-color);
 	border-top: none;
-}
-
-.portfolio .list-box {
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.portfolio .list-box:hover,
-.portfolio .list-box:focus {
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-		0px 1px 1px rgba(46, 47, 66, 0.16),
-		0px 2px 1px rgba(46, 47, 66, 0.08);
-
 }
 
 .header.portfolio {
@@ -455,24 +456,27 @@ body {
 
 }
 
-.customers .link {
+.customers .item {
 	display: inline-flex;
+	width: 168px;
+	height: 88px;
 	padding: 16px 32px;
 	border: 1px solid var(--subtle-text-color);
 	border-radius: 4px;
 	fill: var(--subtle-text-color);
 }
 
-.customers .link:hover,
-.customers .link:focus {
+.customers .item:hover,
+.customers .item:focus {
 	border: 1px solid var(--accent-color);
 	fill: var(--accent-color);
 }
 
 .customers .icon {
 	display: inline-block;
-	width: 104px;
-	height: 56px;
+	fill: inherit;
+	width: 100%;
+	height: 100%;
 }
 
 /* ------------------ footer ------------------ */
@@ -502,18 +506,15 @@ body {
 	font-weight: 500;
 }
 
-.footer .link {
-	display: inline-flex;
-	justify-content: center;
-    align-items: center;
+.footer .icon-box {
 	width: 40px;
 	height: 40px;
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
 }
 
-.footer .link:hover,
-.footer .link:focus {
+.footer .icon-box:hover,
+.footer .icon-box:focus {
 	background-color: var(--success-color);
 }
 
@@ -522,6 +523,7 @@ body {
 }
 
 .footer .icon {
+	display: block;
 	width: 24px;
 	height: 24px;
 }
